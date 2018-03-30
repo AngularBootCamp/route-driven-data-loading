@@ -16,6 +16,7 @@ export class EmployeeDetailComponent {
     this.employee = route.params.pipe(
       pluck<Params, string>('employeeId'), // like .map(params => params['employeeId'])
       switchMap(id => loader.getDetails(id)),
-      share());
+      share()
+    );
   }
 }
