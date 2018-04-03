@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { pluck, share, switchMap } from 'rxjs/operators';
 
 import { EmployeeLoader, Employee } from '../employee-loader.service';
