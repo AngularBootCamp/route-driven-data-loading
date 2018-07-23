@@ -5,6 +5,6 @@
     <p>Hours Worked: <b>{{(employee | async)?.hours_worked}}</b></p>
     <p>Hourly Wage: <b>{{(employee | async)?.hourly_wage}}</b></p>
     <hr>
-    <a [routerLink]="['/employees']">Back to list</a>
+    <a routerLink="/employees">Back to list</a>
   </div>
 </section>

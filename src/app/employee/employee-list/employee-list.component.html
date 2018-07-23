@@ -2,7 +2,7 @@
   <div class="card-content">
     <div class="card-title">Select Employee</div>
     <p *ngFor="let employee of list | async">
-      <a [routerLink]="[employee.id]">
+      <a [routerLink]="employee.id">
         {{employee.first_name}} {{employee.last_name}}
       </a>
     </p>
