@@ -7,7 +7,9 @@ viewer statistics about that one in the view breakdown component.
 You can request a single item from the JSON server, as long as the items
 in the array contain an "id" property. For example:
 
-http://localhost:8085/videos/(id) or https://api.angularbootcamp.com/videos/(id)
+http://localhost:8085/videos/(id)
+
+https://api.angularbootcamp.com/videos/(id)
 
 (Adjust as appropriate if you API URL is different)
 
