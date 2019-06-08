@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { pluck, share, switchMap } from 'rxjs/operators';
+import { map, share, switchMap } from 'rxjs/operators';
 
 import { Employee, EmployeeLoader } from '../employee-loader.service';
 
@@ -13,8 +13,8 @@ export class EmployeeDetailComponent {
   employee: Observable<Employee>;
 
   constructor(route: ActivatedRoute, loader: EmployeeLoader) {
-    this.employee = route.params.pipe(
-      pluck<Params, string>('employeeId'), // like .map(params => params['employeeId'])
+    this.employee = route.paramMap.pipe(
+      map(paramMap => paramMap.get('employeeId') as string),
       switchMap(id => loader.getDetails(id)),
       share()
     );

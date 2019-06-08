@@ -13,17 +13,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [
-    EmployeeListComponent,
-    EmployeeDetailComponent
-  ],
+  declarations: [EmployeeListComponent, EmployeeDetailComponent],
   imports: [
     CommonModule,
     HttpClientModule,
     RouterModule.forChild(routes)
   ],
-  providers: [
-    EmployeeLoader
-  ]
+  providers: [EmployeeLoader]
 })
-export class EmployeeModule { }
+export class EmployeeModule {}

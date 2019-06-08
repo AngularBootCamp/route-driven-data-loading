@@ -16,14 +16,17 @@ const apiUrl = 'https://api.angularbootcamp.com';
 
 @Injectable()
 export class EmployeeLoader {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getList(): Observable<Employee[]> {
-    return this.http.get<Employee[]>(apiUrl + '/employees')
+    return this.http
+      .get<Employee[]>(apiUrl + '/employees')
       .pipe(map(longList => longList.slice(0, 9)));
   }
 
   getDetails(employeeId: string): Observable<Employee> {
-    return this.http.get<Employee>(`${apiUrl}/employees/${employeeId}`);
+    return this.http.get<Employee>(
+      `${apiUrl}/employees/${employeeId}`
+    );
   }
 }
