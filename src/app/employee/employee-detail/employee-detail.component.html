@@ -5,13 +5,15 @@
       {{ (employee | async)?.last_name }}
     </div>
     <p>
-      Email: <b>{{ (employee | async)?.email }}</b>
+      Email: <strong>{{ (employee | async)?.email }}</strong>
     </p>
     <p>
-      Hours Worked: <b>{{ (employee | async)?.hours_worked }}</b>
+      Hours Worked:
+      <strong>{{ (employee | async)?.hours_worked }}</strong>
     </p>
     <p>
-      Hourly Wage: <b>{{ (employee | async)?.hourly_wage }}</b>
+      Hourly Wage:
+      <strong>{{ (employee | async)?.hourly_wage }}</strong>
     </p>
     <hr />
     <a routerLink="/employees">Back to list</a>
