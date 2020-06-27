@@ -5,11 +5,11 @@ import { map } from 'rxjs/operators';
 
 export interface Employee {
   id: number;
-  first_name: string;
-  last_name: string;
+  firstName: string;
+  lastName: string;
   email: string;
-  hours_worked: number;
-  hourly_wage: number;
+  hoursWorked: number;
+  hourlyWage: number;
 }
 
 const apiUrl = 'https://api.angularbootcamp.com';
