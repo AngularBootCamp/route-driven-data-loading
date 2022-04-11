@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [AppRoutingModule, BrowserModule, HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
